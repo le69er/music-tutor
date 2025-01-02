@@ -1,0 +1,68 @@
+// ретина
+@mixin mediaBG() {
+
+	@media (-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+		@content;
+	}
+}
+
+// анимация при наведении
+@mixin animation-shake {
+	&:hover {
+		animation: shake 0.5s ease-in-out;
+	}
+
+	&:not(:hover) {
+		animation: shake-back 0.3s ease-in-out;
+	}
+
+	@keyframes shake {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		25% {
+			transform: rotate(-5deg);
+		}
+
+		75% {
+			transform: rotate(5deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	@keyframes shake-back {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		50% {
+			transform: rotate(-5deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+// линия под тайтл (ширина линии, отступ слева, отступ снизу)
+@mixin underline ($line-width: 0, $line-left: 0, $line-bottom: 0) {
+	position: relative;
+	display: inline-block;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 1px;
+		width: $line-width;
+		left: $line-left;
+		bottom: $line-bottom;
+		background-color: #000;
+	}
+}

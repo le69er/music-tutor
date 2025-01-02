@@ -1,0 +1,21 @@
+// Base
+@import './base/reset';
+@import './base/mixins';
+@import './base/base';
+@import './base/container';
+
+// Components
+@import './components/title';
+@import './components/btns';
+
+// Sections
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/about-me';
+@import './blocks/about-me__text';
+@import './blocks/teaching';
+@import './blocks/teaching__cards';
+@import './blocks/teaching__stats';
+@import './blocks/learning';
+@import './blocks/learning__info';
+@import './blocks/footer';

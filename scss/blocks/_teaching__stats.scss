@@ -1,0 +1,30 @@
+.teaching__stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100px;
+    width: 240px;
+
+    & img {
+        height: 80px;
+    }
+}
+
+.stat_info {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    & p {
+        font-size: 18px;
+    }
+}

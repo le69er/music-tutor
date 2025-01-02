@@ -1,0 +1,21 @@
+.learning__info {
+    width: 480px;
+}
+
+.info__title {
+    margin-bottom: 20px;
+    line-height: 0.9;
+
+    & span {
+        @include underline (70px, 4px);
+    }
+}
+
+.info__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    & p+p {
+        margin-top: 20px;
+    }
+}

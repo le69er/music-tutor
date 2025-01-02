@@ -1,0 +1,12 @@
+.teaching {
+    padding: 50px 0;
+}
+
+.teaching__title {
+    margin-bottom: 40px;
+
+    & h2 {
+        @include underline (94px, 6px, 0);
+    }
+}
+

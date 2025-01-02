@@ -1,0 +1,582 @@
+/* Reset and base styles  */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,600);
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.sticky-footer {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container {
+  width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-color {
+  background-color: #F0F0F0;
+}
+
+.title-72 {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.btn-booking {
+  padding: 11px 24px;
+  width: 200px;
+  border-radius: 100px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #f28b64;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.05;
+  color: #fff;
+  transition: background 0.2s ease-in;
+}
+.btn-booking:hover {
+  background: #ff632a;
+}
+
+.btn-questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 140px;
+  font-weight: 300;
+  line-height: 1.05;
+  color: #000;
+}
+.btn-questions img {
+  width: 46px;
+  height: 46px;
+}
+.btn-questions span {
+  text-align: start;
+}
+.btn-questions:hover {
+  animation: shake 0.5s ease-in-out;
+}
+.btn-questions:not(:hover) {
+  animation: shake-back 0.3s ease-in-out;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shake-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.socials-btns {
+  display: flex;
+  gap: 17px;
+}
+.socials-btns span {
+  transition: transform 0.5s ease;
+}
+.socials-btns span:hover {
+  transform: rotate(360deg);
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.nav li:hover {
+  animation: shake 0.5s ease-in-out;
+}
+.nav li:not(:hover) {
+  animation: shake-back 0.3s ease-in-out;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shake-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nav__list a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.about-me {
+  overflow: hidden;
+  position: relative;
+}
+.about-me::after {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  right: -110px;
+  width: 282px;
+  height: 282px;
+  background: url("./../../img/substract/subtract-50.svg") no-repeat;
+}
+
+.about-me__wrapper {
+  display: flex;
+  position: relative;
+}
+
+.about-me__structure {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  z-index: 1;
+}
+.about-me__structure::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  left: 60%;
+  width: 194px;
+  height: 194px;
+  background: url("./../../img/substract/subtract.svg") no-repeat;
+}
+
+.about-me__btns {
+  display: flex;
+  gap: 30px;
+}
+
+.about-me__text {
+  margin-bottom: 20px;
+}
+.about-me__text h2 {
+  line-height: 0.94;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+.about-me__text h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 65px;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+
+.teaching {
+  padding: 50px 0;
+}
+
+.teaching__title {
+  margin-bottom: 40px;
+}
+.teaching__title h2 {
+  position: relative;
+  display: inline-block;
+}
+.teaching__title h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 94px;
+  left: 6px;
+  bottom: 0;
+  background-color: #000;
+}
+
+.teaching__cards {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  width: 360px;
+  height: 360px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:first-child::before {
+  content: "";
+  z-index: -1;
+  display: block;
+  position: absolute;
+  top: 57%;
+  left: -20%;
+  background-image: url("./../img/substract/subtract.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.card:last-child::after {
+  content: "";
+  z-index: -1;
+  display: block;
+  position: absolute;
+  top: -25%;
+  left: 60%;
+  background-image: url("./../img/substract/subtract.svg");
+  background-repeat: no-repeat;
+  width: 194px;
+  height: 194px;
+  transform: rotate(45deg);
+}
+
+.card__img {
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.card__text {
+  writing-mode: vertical-rl;
+  text-align: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.card--first-color {
+  background: #e2e2e2;
+}
+
+.card--second-color {
+  background: #f28b64;
+}
+
+.card--third-color {
+  background: #5290ea;
+}
+
+.teaching__stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100px;
+  width: 240px;
+}
+.stat img {
+  height: 80px;
+}
+
+.stat_info {
+  display: flex;
+  flex-direction: column;
+}
+.stat_info span {
+  font-size: 48px;
+  font-weight: 600;
+}
+.stat_info p {
+  font-size: 18px;
+}
+
+.learning {
+  position: relative;
+  overflow: hidden;
+}
+
+.learning::after {
+  content: "";
+  position: absolute;
+  top: -18%;
+  right: -110px;
+  width: 282px;
+  height: 282px;
+  background: url("./../../img/substract/subtract-50.svg") no-repeat;
+  transform: rotate(-90deg);
+}
+
+.learning__wrapper {
+  padding: 45px 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 250px;
+}
+
+.learning__left-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.learning__title {
+  position: absolute;
+  right: -160px;
+}
+.learning__title h2 {
+  position: relative;
+  display: inline-block;
+}
+.learning__title h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  left: 0;
+  bottom: 10px;
+  background-color: #000;
+}
+
+.learning__btns {
+  display: flex;
+  gap: 30px;
+}
+
+.learning__info {
+  width: 480px;
+}
+
+.info__title {
+  margin-bottom: 20px;
+  line-height: 0.9;
+}
+.info__title span {
+  position: relative;
+  display: inline-block;
+}
+.info__title span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  left: 4px;
+  bottom: 0;
+  background-color: #000;
+}
+
+.info__text {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.info__text p + p {
+  margin-top: 20px;
+}
+
+.footer-wrapper {
+  padding: 40px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__trial-lesson {
+  position: relative;
+  width: 560px;
+}
+
+.footer__trial-lesson::before {
+  content: "";
+  position: absolute;
+  top: -29%;
+  left: -132%;
+  width: 120%;
+  height: 150%;
+  background-image: url("./../../img/footer/guitar-grif.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.trial-lesson__title {
+  margin-bottom: 20px;
+}
+.trial-lesson__title span {
+  position: relative;
+  display: inline-block;
+}
+.trial-lesson__title span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  left: 3px;
+  bottom: 0;
+  background-color: #000;
+}
+.trial-lesson__title h2 {
+  line-height: 0.9;
+}/*# sourceMappingURL=main.css.map */

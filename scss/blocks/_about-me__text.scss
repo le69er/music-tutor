@@ -1,0 +1,10 @@
+.about-me__text {
+    margin-bottom: 20px;
+
+    & h2 {
+        line-height: 0.94;
+        margin-bottom: 5px;
+
+        @include underline(65px);
+    }
+}

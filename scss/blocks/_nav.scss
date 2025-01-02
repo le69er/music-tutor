@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+
+    & li {
+        @include animation-shake;
+    }
+}
+
+.nav__list a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}

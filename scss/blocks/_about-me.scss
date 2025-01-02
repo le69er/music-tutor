@@ -1,0 +1,44 @@
+.about-me {
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -18%;
+        right: -110px;
+        width: 282px;
+        height: 282px;
+        background: url('./../../img/substract/subtract-50.svg') no-repeat;
+    }
+}
+
+.about-me__wrapper {
+    display: flex;
+    position: relative;
+}
+
+.about-me__structure {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -10%;
+        left: 60%;
+        width: 194px;
+        height: 194px;
+        background: url('./../../img/substract/subtract.svg') no-repeat;
+    }
+}
+
+
+// блок с кнопками
+.about-me__btns {
+    display: flex;
+    gap: 30px;
+}

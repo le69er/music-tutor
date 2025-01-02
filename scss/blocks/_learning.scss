@@ -1,0 +1,43 @@
+.learning {
+    position: relative;
+    overflow: hidden;
+}
+
+.learning::after {
+    content: '';
+    position: absolute;
+    top: -18%;
+    right: -110px;
+    width: 282px;
+    height: 282px;
+    background: url('./../../img/substract/subtract-50.svg') no-repeat;
+    transform: rotate(-90deg);
+}
+
+.learning__wrapper {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 250px;
+}
+
+.learning__left-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.learning__title {
+    position: absolute;
+    right: -160px;
+
+    & h2 {
+        @include underline (70px, 0, 10px);
+    }
+}
+
+.learning__btns {
+    display: flex;
+    gap: 30px;
+}

@@ -1,0 +1,34 @@
+.footer-wrapper {
+    padding: 40px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__trial-lesson {
+    position: relative;
+    width: 560px;
+}
+
+.footer__trial-lesson::before {
+    content: ''; 
+    position: absolute;
+    top: -29%;
+    left: -132%;
+    width: 120%;
+    height: 150%;
+    background-image: url('./../../img/footer/guitar-grif.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.trial-lesson__title {
+    margin-bottom: 20px;
+
+    & span {
+        @include underline(70px, 3px);
+    }
+
+    & h2 {
+        line-height: 0.9;
+    }
+}

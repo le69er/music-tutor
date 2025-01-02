@@ -282,7 +282,7 @@ body {
   right: -110px;
   width: 282px;
   height: 282px;
-  background: url("./../../img/substract/subtract-50.svg") no-repeat;
+  background: url("./../img/substract/subtract-50.svg") no-repeat;
 }
 
 .about-me__wrapper {
@@ -304,7 +304,7 @@ body {
   left: 60%;
   width: 194px;
   height: 194px;
-  background: url("./../../img/substract/subtract.svg") no-repeat;
+  background: url("./../img/substract/subtract.svg") no-repeat;
 }
 
 .about-me__btns {
@@ -464,7 +464,7 @@ body {
   right: -110px;
   width: 282px;
   height: 282px;
-  background: url("./../../img/substract/subtract-50.svg") no-repeat;
+  background: url("./../img/substract/subtract-50.svg") no-repeat;
   transform: rotate(-90deg);
 }
 
@@ -555,7 +555,7 @@ body {
   left: -132%;
   width: 120%;
   height: 150%;
-  background-image: url("./../../img/footer/guitar-grif.png");
+  background-image: url("./../img/footer/guitar-grif.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
